@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  letter-spacing: 0.005rem;
+}
+
+body {
+  background-color: #d3d3d3;
+}
+
+p,
+figcaption {
+  background-color: #d3d3d3;
+  padding: 0.35rem;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background-image: radial-gradient(
+    circle at center,
+    black 0.05rem,
+    transparent 0
+  );
+  background-size: 0.5rem 0.5rem;
+  background-repeat: round;
+}
+
+.stories,
+.posts,
+.navbar{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Stories */
+
+.stories {
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0;
+  border: 0.065rem black solid;
+}
+
+.story figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Posts */
+
+.posts {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-body {
+  width: 100%;
+}
+
+.post-image {
+  width: 100vw;
+  height: 33vh;
+}
+
+.actions button {
+  width: 2.25rem;
+  height: 1.75rem;
+  border: outset black 2px;
+  background-color: #b9b9b9;
+}
+
+.actions button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: #d3d3d3;
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.navbar button {
+  background-color: inherit;
+  height: 2.5rem;
+  width: 2.25rem;
+  border: outset black 2px;
+}
+
+/* Misc */
+
+.following-pfp,
+.my-pfp {
+  width: 3.6rem;
+  aspect-ratio: 1/1;
+}
+
+.following-pfp-small {
+  width: 2rem;
+}
+
+.following-name {
+  padding-right: 1rem;
+}
+
+.following-name-small {
+  font-size: 0.75rem;
+}
+
+
