@@ -1,36 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: Microsoft Sans;
+  src: url(assets/windows-font.ttf);
+  font-size: 18px;
+}
 
 /* General styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier Prime", "Courier New", Courier, monospace;
-  letter-spacing: 0.005rem;
+  font-family: "Microsoft Sans", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.025rem;
 }
 
-body {
-  background-color: #d3d3d3;
-}
+body { background-color: #d3d3d3; }
 
 p,
-figcaption {
-  background-color: #d3d3d3;
-  padding: 0.35rem;
-}
+figcaption { padding: 0.35rem; }
 
 .feed {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-  background-image: radial-gradient(
-    circle at center,
-    black 0.05rem,
-    transparent 0
-  );
-  background-size: 0.5rem 0.5rem;
-  background-repeat: round;
   padding-bottom: 3.5rem;
 }
 
@@ -45,10 +37,18 @@ figcaption {
 /* Stories */
 
 .stories {
-  align-items: center;
-  padding: 0.5rem 0 0.5rem 0;
-  border: black solid;
-  border-style: groove;
+  padding: 0.2rem;
+  align-items: baseline;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  background-color: #b9b9b9; 
+  border-style: solid;
+  border-width: 0.16rem;
+  border-color: white black black white;
+}
+
+.story { 
+  width: 25%;  
+  height: 4.8rem;
 }
 
 .story figure {
@@ -64,45 +64,56 @@ figcaption {
   gap: 0.5rem;
 }
 
+.post {
+  border-style: groove;
+  border-color: #b9b9b9;
+  border-width: 0.15rem;
+  margin-inline: 0.5rem;
+  margin-block: 0.75rem;
+  padding: 0.25rem;
+}
+
 .post-header {
+  background-color: #d3d3d3;
   display: flex;
+  position: relative;
+  top: -1.3rem;
+  margin-bottom: -1.3rem;
+  width: fit-content;
   align-items: center;
 }
 
-.post-body {
-  width: 100%;
-}
+.post-body { width: 100%; }
 
 .post-image {
-  width: 100vw;
+  width: 100%;
   height: 33vh;
 }
 
-.actions {
-  display: flex;
+.likes {
+  font-size: 0.85rem;
+  font-weight: bolder;
 }
 
+.hashtag {
+  color: blue;
+  text-decoration: underline;
+}
+
+.actions { display: flex; }
+
 .actions button {
-  width: 2.75rem;
+  width: 4.8rem;
   height: 2rem;
   border-width: 0.16rem;
   border-color: white black black white;
   background-color: #b9b9b9;
+  font-size: 0.8rem;
 }
 
-.actions button:first-child {
-  margin-right: 0.6rem;
-}
+.actions button:first-child { margin-right: 0.6rem; }
 
-.actions button img {
-  width: 1.7rem;
-  height: 1.7rem;
-}
-
-.actions button:active img {
-  width: 50%;
-  height: 75%;
-}
+.actions button:active p { border-style: dotted; }
 
 /* Navbar */
 
@@ -123,20 +134,9 @@ figcaption {
   width: 25%;
   border-width: 0.16rem;
   border-color: white black black white;
-  border-radius: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.navbar button img {
-  width: 1.89rem;
-  height: 2rem;
-}
-
-.navbar button:active img {
-  width: 1.665rem;
-  height: 1.75rem;
 }
 
 /* Misc */
@@ -145,7 +145,7 @@ figcaption {
   display: flex;
   align-items: center;
   padding: 0.2rem;
-  background-image: linear-gradient(to right, #1f1d8e, white);
+  background-color: #8C0095;
   color: white;
   font-weight: normal;
 }
@@ -153,9 +153,11 @@ figcaption {
 button.focused,
 button:active {
   border-color: black white white black;
-  border-radius: 0;
   border-width:3px;
 }
+
+button.focused p, 
+button:active p { border-style: dotted; }
 
 .following-pfp,
 .my-pfp {
@@ -163,14 +165,8 @@ button:active {
   aspect-ratio: 1/1;
 }
 
-.following-pfp-small {
-  width: 2rem;
-}
+.following-pfp-small { width: 2rem; }
 
-.following-name {
-  padding-right: 1rem;
-}
+.following-name { padding-right: 1rem; }
 
-.following-name-small {
-  font-size: 0.75rem;
-}
+.following-name-small{ font-size: 0.85rem; }
